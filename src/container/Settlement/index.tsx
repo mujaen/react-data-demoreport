@@ -1,7 +1,7 @@
 import React from 'react'
 
-function ChartPage() {
+function Settlement() {
   return <div>차트4</div>
 }
 
-export default ChartPage
+export default Settlement

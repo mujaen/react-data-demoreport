@@ -43,5 +43,10 @@ module.exports = (options) => ({
       },
     ],
   },
-  plugins: options.plugins,
+  plugins: options.plugins.concat([
+    new webpack.EnvironmentPlugin({
+      NODE_ENV: 'development',
+      DIST_ENV: JSON.stringify(process.env.DIST_ENV),
+    }),
+  ]),
 })

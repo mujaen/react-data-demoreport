@@ -2,15 +2,15 @@ import React from 'react'
 
 import { Routes, Route } from 'react-router-dom'
 import Dashboard from 'container/Dashboard'
-import ChartPage from 'container/ChartPage'
-import TablePage from 'container/TablePage'
+import Settlement from 'container/Settlement'
+import Purchase from 'container/Purchase'
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Dashboard />} />
-      <Route path="chart" element={<ChartPage />} />
-      <Route path="table" element={<TablePage />} />
+      <Route path="settlement" element={<Settlement />} />
+      <Route path="purchase" element={<Purchase />} />
     </Routes>
   )
 }
