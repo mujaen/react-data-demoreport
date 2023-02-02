@@ -1,0 +1,63 @@
+{
+  "name": "react-data-demoreport",
+  "version": "1.0.0",
+  "description": "광고 정산 데이터를 사용한 다양한 형태의 리포트 구현",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --config ./webpack/webpack.dev.config.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "yarn run typecheck && yarn run lint:eslint:quiet .",
+    "lint:eslint": "eslint --ext .ts,.tsx,.js,.jsx --no-error-on-unmatched-pattern",
+    "lint:eslint:quiet": "eslint --ext .ts,.tsx,.js,.jsx --no-error-on-unmatched-pattern --quiet",
+    "lint:eslint:fix": "eslint --ext .ts,.tsx,.js,.jsx --no-error-on-unmatched-pattern --quiet --fix"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "yarn run lint:eslint:fix .",
+      "git add --force"
+    ],
+    "*.{md,json}": [
+      "prettier --write",
+      "git add --force"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mujaen/react-data-demoreport.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mujaen/react-data-demoreport/issues"
+  },
+  "homepage": "https://github.com/mujaen/react-data-demoreport#readme",
+  "packageManager": "yarn@3.4.1",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@emotion/react": "^11.10.5",
+    "@tanstack/react-query": "^4.24.4",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "esbuild-loader": "^2.21.0",
+    "eslint": "^8.33.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "html-webpack-plugin": "^5.5.0",
+    "prettier": "^2.8.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}

@@ -1,0 +1,8 @@
+.vscode
+.yarn
+lib
+\*.html
+node_modules
+build
+webpack/
+.eslintrc.js
