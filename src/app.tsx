@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import AppFrame from 'components/AppLayout'
 
@@ -21,6 +22,8 @@ const rootNode = document.getElementById('app')!
 
 ReactDOM.createRoot(rootNode).render(
   <QueryClientProvider client={queryClient}>
-    <AppFrame />
+    <BrowserRouter>
+      <AppFrame />
+    </BrowserRouter>
   </QueryClientProvider>,
 )

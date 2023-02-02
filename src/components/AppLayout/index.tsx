@@ -1,7 +1,8 @@
 import React from 'react'
+import AppRoutes from 'router'
 
 function AppFrame() {
-  return <div>1</div>
+  return <AppRoutes />
 }
 
 export default AppFrame

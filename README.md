@@ -7,7 +7,7 @@
 - typescript 4.9.5
 - react 18.2.0
 - react-dom 18.2.0
-- react-query 3.39.3
+- react-query 4.24.4
 - emotion 11.10.5
 
 ## 구현전략
@@ -17,3 +17,17 @@
 1. 스타일링은 CSS-in-JS를 활용한다(Emotion, Styled-Components) : 3h
 1. React-query로 데이터를 조회하고 상태를 관리한다
 1. 메뉴를 클릭 시 각각의 리포트 화면을 라우터한다(UI + Markup) : 1h
+
+## 실행방법
+
+1. Package Manager는 yarn을 기본으로 사용합니다
+
+```
+yarn install
+```
+
+1. 현재 코드를 그대로 빌드해 로컬에서 서빙해줍니다.
+
+```
+yarn start
+```

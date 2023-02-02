@@ -10,7 +10,8 @@ module.exports = (options) => ({
   entry: options.entry,
   devServer: {
     port: 5000,
-    static: path.resolve(__dirname, 'app')
+    static: path.resolve(__dirname, 'app'),
+    historyApiFallback: true,
   },
   output: {
     filename: '[name].[chunkhash].js',
@@ -22,25 +23,25 @@ module.exports = (options) => ({
   },
   optimization: {
     minimizer: [
-        new ESBuildMinifyPlugin({
-            target: 'es2015',
-        })
-    ]
+      new ESBuildMinifyPlugin({
+        target: 'es2015',
+      }),
+    ],
   },
   module: {
     rules: [
-        {
-            test: /\.ts(x?)$/,
-            use: {
-                loader: 'esbuild-loader',
-                options: {
-                    loader: 'tsx',
-                    target: 'es2015',
-                    tsconfigRaw: require('../tsconfig.json')
-                }
-            }
-        }
-    ]
+      {
+        test: /\.ts(x?)$/,
+        use: {
+          loader: 'esbuild-loader',
+          options: {
+            loader: 'tsx',
+            target: 'es2015',
+            tsconfigRaw: require('../tsconfig.json'),
+          },
+        },
+      },
+    ],
   },
   plugins: options.plugins,
 })
