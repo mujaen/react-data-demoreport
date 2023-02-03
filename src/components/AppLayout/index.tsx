@@ -8,8 +8,8 @@ import { Global } from '@emotion/react'
 function AppFrame() {
   return (
     <React.StrictMode>
-      <Global styles={reset} />
       <Global styles={base} />
+      <Global styles={reset} />
       <AppRoutes />
     </React.StrictMode>
   )

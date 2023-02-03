@@ -7,16 +7,16 @@ interface SectionTitleProps {
 }
 
 const Wrapper = styled.div<SectionTitleProps>`
-  width: 50%;
+  width: 700px;
   height: ${({ height }) => `${height}px` || 'auto'};
   padding: 20px;
   box-sizing: border-box;
 `
 
-function Box({ children, ...props }: PropsWithChildren<SectionTitleProps>) {
+function Grid({ children, ...props }: PropsWithChildren<SectionTitleProps>) {
   const { height } = props
 
   return <Wrapper height={height}>{children}</Wrapper>
 }
 
-export default Box
+export default Grid

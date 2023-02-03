@@ -9,14 +9,16 @@ const Wrapper = styled.div`
 `
 
 const Header = styled.header`
-  width: 100px;
+  width: 140px;
   height: 100vh;
 
   background-color: #2f2f34;
 `
 
 const Contents = styled.div`
-  width: calc(100% - 100px);
+  width: calc(100% - 140px);
+  padding: 40px;
+  box-sizing: border-box;
 `
 
 function Container({ children }) {

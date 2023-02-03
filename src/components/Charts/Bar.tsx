@@ -2,8 +2,8 @@ import React, { useMemo } from 'react'
 import { AxisOptions, Chart } from 'react-charts'
 
 type DailyStars = {
-  date: Date
-  stars: number
+  primary: Date
+  likes: number
 }
 
 type Series = {
@@ -18,7 +18,7 @@ interface BarProps {
 function Bar({ data }: BarProps) {
   const primaryAxis = useMemo(
     (): AxisOptions<DailyStars> => ({
-      getValue: (datum) => datum.date,
+      getValue: (datum) => datum.primary,
     }),
     [],
   )
@@ -26,7 +26,7 @@ function Bar({ data }: BarProps) {
   const secondaryAxes = useMemo(
     (): AxisOptions<DailyStars>[] => [
       {
-        getValue: (datum) => datum.stars,
+        getValue: (datum) => datum.likes,
         elementType: 'bar',
       },
     ],
