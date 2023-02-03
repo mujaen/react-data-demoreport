@@ -12,6 +12,8 @@ module.exports = (options) => ({
     port: 5000,
     static: path.resolve(__dirname, 'app'),
     historyApiFallback: true,
+    open: true,
+    hot: true,
   },
   output: {
     filename: '[name].[chunkhash].js',

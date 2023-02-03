@@ -1,7 +1,9 @@
 import React from 'react'
 
+import Container from 'components/AppLayout/Container'
+
 function Settlement() {
-  return <div>차트4</div>
+  return <Container>12</Container>
 }
 
 export default Settlement
